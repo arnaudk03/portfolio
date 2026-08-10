@@ -1,0 +1,110 @@
+[
+  {
+    "id": "backend",
+    "title": {
+      "fr": "Backend",
+      "en": "Backend"
+    },
+    "icon": "fa-server",
+    "skills": [
+      "Java 17+",
+      "Spring Boot",
+      "Spring Security",
+      "Spring Data",
+      "JPA/Hibernate",
+      "Maven",
+      "Gradle",
+      "Java FX",
+      "Spring MVC",
+      "Java EE",
+      "Java Swing"
+    ]
+  },
+  {
+    "id": "frontend",
+    "title": {
+      "fr": "Frontend",
+      "en": "Frontend"
+    },
+    "icon": "fa-desktop",
+    "skills": [
+      "Angular",
+      "TypeScript",
+      "HTML5",
+      "CSS3",
+      "Angular Material",
+      "Tailwind CSS"
+    ]
+  },
+  {
+    "id": "mobile",
+    "title": {
+      "fr": "Mobile",
+      "en": "Mobile"
+    },
+    "icon": "fa-mobile-screen",
+    "skills": [
+      "Flutter",
+      "Dart"
+    ]
+  },
+  {
+    "id": "database",
+    "title": {
+      "fr": "Base de données",
+      "en": "Database"
+    },
+    "icon": "fa-database",
+    "skills": [
+      "PostgreSQL",
+      "MySQL",
+      "SQLite"
+    ]
+  },
+  {
+    "id": "architecture",
+    "title": {
+      "fr": "Architecture",
+      "en": "Architecture"
+    },
+    "icon": "fa-sitemap",
+    "skills": [
+      "Microservices",
+      "REST API",
+      "OAuth2",
+      "JWT",
+      "Keycloak",
+      "RabbitMQ",
+      "Kafka"
+    ]
+  },
+  {
+    "id": "devops",
+    "title": {
+      "fr": "DevOps",
+      "en": "DevOps"
+    },
+    "icon": "fa-docker",
+    "skills": [
+      "Docker",
+      "Docker Compose",
+      "Kubernetes",
+      "Git",
+      "GitHub",
+      "GitLab CI/CD"
+    ]
+  },
+  {
+    "id": "modeling",
+    "title": {
+      "fr": "Modélisation",
+      "en": "Modeling"
+    },
+    "icon": "fa-diagram-project",
+    "skills": [
+      "UML",
+      "PlantUML",
+      "Merise"
+    ]
+  }
+]

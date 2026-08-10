@@ -1,0 +1,77 @@
+[
+  {
+    "year": "Depuis déc. 2023",
+    "title": {
+      "fr": "Chargé du suivi des systèmes d'information",
+      "en": "Information Systems Monitoring Officer"
+    },
+    "company": {
+      "fr": "Ministère de la Transition Digitale (MTDPCE) — Ouagadougou",
+      "en": "Ministry of Digital Transition (MTDPCE) — Ouagadougou"
+    },
+    "description": {
+      "fr": "Chargé d'appui à la coordination de la dématérialisation des procédures administratives (2025-2026). Suivi des systèmes d'information de l'administration publique, suivi du dossier patient informatisé (SIH) et Vice-président du jury mini-concours de la 20è édition de la Semaine Numérique du Burkina Faso.",
+      "en": "Support coordinator for administrative procedure dematerialization (2025-2026). Public administration IS monitoring, Electronic Health Record (EHR) tracking, and Vice-President of the 20th Burkina Digital Week competition jury."
+    }
+  },
+  {
+    "year": "Jan. 2024 – Mars 2024",
+    "title": {
+      "fr": "Chargé d'étude et de développement informatique (Consultant)",
+      "en": "Software Development Consulting Engineer"
+    },
+    "company": {
+      "fr": "Digitalisation & Décisionnel (DID) — Bobo-Dioulasso",
+      "en": "Digitalization & Decision (DID) — Bobo-Dioulasso"
+    },
+    "description": {
+      "fr": "Conseil en ingénierie logicielle. Maintenance du Progiciel de gestion de collège et lycée et assistance du personnel technique sur les bonnes pratiques de développement.",
+      "en": "Software engineering consulting. Maintenance of high school management ERP and technical team mentoring on application development best practices."
+    }
+  },
+  {
+    "year": "Déc. 2023 – Jan. 2024",
+    "title": {
+      "fr": "Chargé du développement Back-end",
+      "en": "Back-end Development Lead"
+    },
+    "company": {
+      "fr": "NEBRAATA Consulting And Innovation — Ouagadougou",
+      "en": "NEBRAATA Consulting And Innovation — Ouagadougou"
+    },
+    "description": {
+      "fr": "Étude et implémentation de l'Architecture Hexagonale. Analyse et conception du Système de gestion automatisé du Cadastre et des Domaines (SYS@D).",
+      "en": "Hexagonal Architecture design and implementation. Analysis and design of the Automated Land & Cadastre Management System (SYS@D)."
+    }
+  },
+  {
+    "year": "2021 – 2023",
+    "title": {
+      "fr": "Chef Adjoint R&D / Développeur Full-Stack & Mobile",
+      "en": "Deputy R&D Lead / Full-Stack & Mobile Developer"
+    },
+    "company": {
+      "fr": "Digitalisation & Décisionnel (DID) — Bobo-Dioulasso",
+      "en": "Digitalization & Decision (DID) — Bobo-Dioulasso"
+    },
+    "description": {
+      "fr": "Management adjoint de l'équipe R&D. Conception de progiciels web (Spring Boot, React), développement de l'application Android de recouvrement pour la Chambre de Commerce de Brazzaville, du progiciel SOFATT et du système de gestion sportive (Iron Biby).",
+      "en": "Deputy management of the R&D team. Development of web ERPs (Spring Boot, React), Android recovery app for the Brazzaville Chamber of Commerce, SOFATT industrial software, and Iron Biby sports center app."
+    }
+  },
+  {
+    "year": "2020 – 2021",
+    "title": {
+      "fr": "Développeur d'Applications & BD (CARFO & CHU-Bogodogo)",
+      "en": "Application & Database Developer (CARFO & CHU-Bogodogo)"
+    },
+    "company": {
+      "fr": "CHU-Bogodogo & CARFO — Ouagadougou",
+      "en": "CHU-Bogodogo & CARFO — Ouagadougou"
+    },
+    "description": {
+      "fr": "Modélisation UML et mise en place du système de gestion de la Pharmacie Hospitalière (Spring MVC, Java EE, PrimeFaces, PostgreSQL), du système de comptabilité matière et du système de prestation de pensions en ligne à la CARFO.",
+      "en": "UML modeling and implementation of the Hospital Pharmacy system (Spring MVC, Java EE, PrimeFaces, PostgreSQL), material accounting system at CHU-Bogodogo, and online pension system at CARFO."
+    }
+  }
+]
