@@ -1,0 +1,67 @@
+<section class="projects" id="projects">
+  <div class="section-container">
+    <app-section-title titleKey="PROJECTS.TITLE" subtitleKey="PROJECTS.SUBTITLE" />
+
+    <div class="projects__toolbar">
+      <div class="projects__search">
+        <i class="fa-solid fa-search"></i>
+        <input
+          type="text"
+          [(ngModel)]="searchQuery"
+          (ngModelChange)="onSearchChange()"
+          [placeholder]="'PROJECTS.SEARCH' | translate"
+        />
+      </div>
+      <div class="projects__filters">
+        @for (filter of filters; track filter.id) {
+          <button
+            class="projects__filter"
+            [class.projects__filter--active]="activeFilter === filter.id"
+            (click)="setFilter(filter.id)"
+            type="button"
+          >
+            @if (filter.id === 'all') {
+              {{ filter.label | translate }}
+            } @else {
+              {{ filter.label }}
+            }
+          </button>
+        }
+      </div>
+    </div>
+
+    @if (filteredProjects.length === 0) {
+      <p class="projects__empty">{{ 'PROJECTS.NO_RESULTS' | translate }}</p>
+    } @else {
+      <div class="projects__grid">
+        @for (project of filteredProjects; track project.id) {
+          <article class="projects__card card">
+            @if (project.image) {
+              <div class="projects__card-img-wrapper">
+                <img [src]="project.image" [alt]="localized(project.name)" class="projects__card-img" />
+              </div>
+            } @else {
+              <div class="projects__card-icon">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+            }
+            <h3>{{ localized(project.name) }}</h3>
+            <p>{{ localized(project.description) }}</p>
+            <div class="projects__tech">
+              @for (tech of project.technologies.slice(0, 4); track tech) {
+                <span>{{ tech }}</span>
+              }
+              @if (project.technologies.length > 4) {
+                <span>+{{ project.technologies.length - 4 }}</span>
+              }
+            </div>
+            <a [routerLink]="['/projects', project.id]" class="projects__link">
+              {{ 'PROJECTS.VIEW_DETAILS' | translate }}
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+        }
+      </div>
+    }
+  </div>
+</section>

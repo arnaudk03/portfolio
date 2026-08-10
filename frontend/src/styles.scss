@@ -1,0 +1,71 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary-dark: #0f172a;
+  --color-primary: #2563eb;
+  --color-primary-light: #3b82f6;
+  --color-gray-light: #f1f5f9;
+  --color-gray: #64748b;
+  --color-surface: #ffffff;
+  --color-surface-dark: #1e293b;
+  --color-text: #0f172a;
+  --color-text-muted: #64748b;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Poppins', system-ui, sans-serif;
+}
+
+:root {
+  --bg: #ffffff;
+  --bg-secondary: #f8fafc;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --card: #ffffff;
+  --header-bg: rgba(255, 255, 255, 0.85);
+}
+
+.dark {
+  --bg: #0f172a;
+  --bg-secondary: #1e293b;
+  --text: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border: #334155;
+  --card: #1e293b;
+  --header-bg: rgba(15, 23, 42, 0.9);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}
+
+.section-container {
+  @apply mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-primary-light hover:shadow-lg;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg border-2 border-primary px-6 py-3 text-sm font-semibold text-primary transition-all hover:bg-primary hover:text-white;
+}
+
+.card {
+  @apply rounded-xl border border-[var(--border)] bg-[var(--card)] p-6 shadow-sm transition-all hover:shadow-md;
+}

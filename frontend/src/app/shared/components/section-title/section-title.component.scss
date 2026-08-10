@@ -1,0 +1,18 @@
+@reference "../../../../styles.scss";
+
+.section-title {
+  @apply mb-12 text-center;
+}
+
+.section-title__subtitle {
+  @apply mb-2 text-sm font-semibold uppercase tracking-widest text-primary;
+}
+
+.section-title__title {
+  @apply mb-4 font-display text-3xl font-bold md:text-4xl;
+  color: var(--text);
+}
+
+.section-title__line {
+  @apply mx-auto h-1 w-16 rounded-full bg-primary;
+}

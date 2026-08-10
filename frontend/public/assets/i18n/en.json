@@ -1,0 +1,107 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "SKILLS": "Skills",
+    "PROJECTS": "Projects",
+    "ARCHITECTURE": "Architecture",
+    "EXPERIENCE": "Experience",
+    "GITHUB": "GitHub",
+    "GITLAB": "GitLab",
+    "CONTACT": "Contact",
+    "CV": "Download CV"
+  },
+  "HERO": {
+    "NAME": "T. Wend Goudi Arnaud Kiema",
+    "TITLE": "Software Engineer | Senior Java Developer & Software Architect",
+    "SUBTITLE": "Software Engineering Consultant. Specialist in Spring Boot, Angular, Microservices and enterprise digital transformation.",
+    "CTA_PROJECTS": "View my projects",
+    "CTA_CONTACT": "Contact me",
+    "CTA_CV": "Download my CV"
+  },
+  "ABOUT": {
+    "TITLE": "About",
+    "SUBTITLE": "Who am I?",
+    "P1": "Software Engineer and Software Engineering Consultant, currently overseeing information systems monitoring and process dematerialization at Burkina Faso's Ministry of Digital Transition, Posts and Electronic Communications (MTDPCE).",
+    "P2": "With solid experience designing enterprise software architectures (Spring Boot, Angular, React, Flutter, PostgreSQL), I lead and build critical applications for public administration, university hospitals, and private industry.",
+    "P3": "Passionate about Agile/Scrum methodologies, Hexagonal Architecture, Microservices, and Cybersecurity (Google Certified), my goal is to deliver high-performing, secure, and sustainable software solutions."
+  },
+  "SKILLS": {
+    "TITLE": "Skills",
+    "SUBTITLE": "Technical stack & expertise"
+  },
+  "PROJECTS": {
+    "TITLE": "My achievements",
+    "SUBTITLE": "Enterprise & e-Government projects",
+    "SEARCH": "Search a project...",
+    "ALL": "All",
+    "VIEW_DETAILS": "View details",
+    "TECHNOLOGIES": "Technologies",
+    "ARCHITECTURE": "Architecture",
+    "FEATURES": "Features",
+    "CHALLENGES": "Technical challenges",
+    "RESULTS": "Results",
+    "BACK": "Back to projects",
+    "NO_RESULTS": "No projects found."
+  },
+  "ARCHITECTURE": {
+    "TITLE": "Architecture",
+    "SUBTITLE": "Approach & patterns",
+    "DESCRIPTION": "Design of business-oriented distributed architectures with clear separation of concerns, centralized security and asynchronous communication."
+  },
+  "EXPERIENCE": {
+    "TITLE": "Experience",
+    "SUBTITLE": "Professional journey"
+  },
+  "CERTIFICATIONS": {
+    "TITLE": "Certifications",
+    "SUBTITLE": "Training & validations",
+    "VERIFY": "Verify credential"
+  },
+  "PUBLICATIONS": {
+    "TITLE": "Publications",
+    "SUBTITLE": "Technical articles",
+    "MIN_READ": "min read"
+  },
+  "GITHUB": {
+    "TITLE": "GitHub",
+    "SUBTITLE": "Open source activity",
+    "LOADING": "Loading GitHub statistics...",
+    "ERROR": "Unable to load GitHub statistics.",
+    "VIEW_PROFILE": "View my GitHub profile",
+    "REPOS": "Public repos",
+    "FOLLOWERS": "Followers",
+    "FOLLOWING": "Following",
+    "RECENT_REPOS": "Recent repositories"
+  },
+  "GITLAB": {
+    "TITLE": "GitLab",
+    "SUBTITLE": "Open source activity",
+    "LOADING": "Loading GitLab statistics...",
+    "ERROR": "Unable to load GitLab statistics.",
+    "VIEW_PROFILE": "View my GitLab profile",
+    "REPOS": "Public repos",
+    "FOLLOWERS": "Followers",
+    "FOLLOWING": "Following",
+    "RECENT_REPOS": "Recent repositories"
+  },
+  "CONTACT": {
+    "TITLE": "Contact",
+    "SUBTITLE": "Let's work together",
+    "NAME": "Name",
+    "EMAIL": "Email",
+    "SUBJECT": "Subject",
+    "MESSAGE": "Message",
+    "SEND": "Send",
+    "SENDING": "Sending...",
+    "SUCCESS": "Message sent successfully!",
+    "ERROR": "Error sending message. Please try again.",
+    "INFO": "Available for software architecture, Java/Spring development and digital transformation missions.",
+    "QR_TITLE": "Portfolio QR Code",
+    "QR_DESC": "Scan to quickly access this portfolio."
+  },
+  "FOOTER": {
+    "RIGHTS": "All rights reserved.",
+    "BUILT_WITH": "Portfolio built with Angular 20 & Spring Boot"
+  }
+}

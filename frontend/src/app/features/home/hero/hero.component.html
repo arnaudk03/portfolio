@@ -1,0 +1,36 @@
+<section class="hero" id="home">
+  <div class="hero__bg"></div>
+  <div class="hero__content">
+    <div class="hero__avatar">
+      <div class="hero__avatar-inner">
+        <img src="/assets/images/arnaud-kiema-avatar.png" alt="Arnaud Kiema - Architecte Logiciel"
+          class="hero__avatar-img" />
+      </div>
+    </div>
+
+    <h1 class="hero__name">{{ 'HERO.NAME' | translate }}</h1>
+    <h2 class="hero__title">{{ 'HERO.TITLE' | translate }}</h2>
+    <p class="hero__subtitle">{{ 'HERO.SUBTITLE' | translate }}</p>
+    <div class="hero__actions">
+      <button class="btn-primary" (click)="downloadCv()" type="button">
+        <i class="fa-solid fa-download"></i>
+        {{ 'HERO.CTA_CV' | translate }}
+      </button>
+      <button class="btn-outline" (click)="scrollTo('projects')" type="button">
+        <i class="fa-solid fa-folder-open"></i>
+        {{ 'HERO.CTA_PROJECTS' | translate }}
+      </button>
+      <button class="btn-outline" (click)="scrollTo('contact')" type="button">
+        <i class="fa-solid fa-envelope"></i>
+        {{ 'HERO.CTA_CONTACT' | translate }}
+      </button>
+    </div>
+    <div class="hero__tech">
+      <span><i class="fa-brands fa-java"></i> Java</span>
+      <span><i class="fa-solid fa-leaf"></i> Spring Boot</span>
+      <span><i class="fa-brands fa-angular"></i> Angular</span>
+      <span><i class="fa-solid fa-diagram-project"></i> Microservices</span>
+      <span><i class="fa-solid fa-shield-halved"></i> Keycloak</span>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+@reference "../../../../styles.scss";
+
+.certifications__grid {
+  @apply grid gap-4 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+.certifications__card {
+  @apply flex items-start gap-4;
+}
+
+.certifications__icon {
+  @apply flex h-12 w-12 shrink-0 items-center justify-center rounded-lg text-xl text-primary;
+  background: color-mix(in srgb, var(--color-primary) 12%, transparent);
+}
+
+.certifications__body {
+  @apply flex flex-col flex-1 justify-between h-full;
+}
+
+.certifications__card h3 {
+  @apply mb-1 font-display text-sm font-semibold leading-snug;
+  color: var(--text);
+}
+
+.certifications__issuer {
+  @apply text-sm;
+  color: var(--text-muted);
+}
+
+.certifications__footer {
+  @apply mt-3 flex items-center justify-between gap-2 flex-wrap;
+}
+
+.certifications__year {
+  @apply inline-block rounded-full px-2.5 py-0.5 text-xs font-medium;
+  background: var(--bg-secondary);
+  color: var(--text-muted);
+}
+
+.certifications__verify {
+  @apply inline-flex items-center gap-1.5 text-xs font-medium text-primary hover:underline transition-colors;
+}

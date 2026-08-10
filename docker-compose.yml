@@ -1,0 +1,27 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      - MAIL_ENABLED=${MAIL_ENABLED:-false}
+      - MAIL_HOST=${MAIL_HOST:-smtp.gmail.com}
+      - MAIL_PORT=${MAIL_PORT:-587}
+      - MAIL_USERNAME=${MAIL_USERNAME:-}
+      - MAIL_PASSWORD=${MAIL_PASSWORD:-}
+      - CONTACT_RECIPIENT=${CONTACT_RECIPIENT:-contact@arnaud-kiema.dev}
+      - CORS_ORIGINS=http://localhost,http://localhost:80
+      - GITHUB_TOKEN=${GITHUB_TOKEN:-}
+    ports:
+      - "8080:8080"
+    restart: unless-stopped

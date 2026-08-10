@@ -1,0 +1,209 @@
+<section class="architecture" id="architecture">
+  <div class="section-container">
+    <app-section-title titleKey="ARCHITECTURE.TITLE" subtitleKey="ARCHITECTURE.SUBTITLE" />
+    
+    <p class="architecture__intro">
+      {{ 'ARCHITECTURE.DESCRIPTION' | translate }}
+    </p>
+
+    <!-- Tabs switcher -->
+    <div class="architecture__tabs">
+      <button 
+        class="architecture__tab" 
+        [class.architecture__tab--active]="activeTab === 'flow'"
+        (click)="activeTab = 'flow'"
+        type="button">
+        <i class="fa-solid fa-network-wired"></i>
+        Architecture Microservices (Flow)
+      </button>
+      <button 
+        class="architecture__tab" 
+        [class.architecture__tab--active]="activeTab === 'hexagonal'"
+        (click)="activeTab = 'hexagonal'"
+        type="button">
+        <i class="fa-solid fa-shapes"></i>
+        Architecture Hexagonale (DDD)
+      </button>
+      <button 
+        class="architecture__tab" 
+        [class.architecture__tab--active]="activeTab === 'uml'"
+        (click)="activeTab = 'uml'"
+        type="button">
+        <i class="fa-solid fa-diagram-project"></i>
+        Modélisation UML & Sécurité
+      </button>
+    </div>
+
+    <!-- TAB 1: Microservices Flow Visualizer -->
+    @if (activeTab === 'flow') {
+      <div class="architecture__flow-wrapper">
+        <p class="architecture__hint">
+          <i class="fa-solid fa-hand-pointer"></i> Cliquez sur chaque composant pour inspecter ses spécifications techniques et patterns associés.
+        </p>
+
+        <div class="architecture__diagram-interactive">
+          @for (layer of layers; track layer.id; let last = $last) {
+            <div 
+              class="architecture__node" 
+              [class.architecture__node--selected]="selectedLayerId === layer.id"
+              [style.--node-color]="layer.color"
+              (click)="selectLayer(layer.id)">
+              <div class="architecture__node-header">
+                <i [class]="layer.icon"></i>
+                <span class="architecture__node-title">{{ layer.name }}</span>
+              </div>
+              <span class="architecture__node-sub">{{ layer.subtitle }}</span>
+            </div>
+            @if (!last) {
+              <div class="architecture__connector">
+                <i class="fa-solid fa-arrow-down md:fa-arrow-right"></i>
+              </div>
+            }
+          }
+        </div>
+
+        <!-- Selected Layer Detail Card -->
+        @if (getSelectedLayer(); as selected) {
+          <div class="architecture__inspector card" [style.border-top-color]="selected.color">
+            <div class="architecture__inspector-header">
+              <div class="architecture__inspector-icon" [style.background-color]="selected.color">
+                <i [class]="selected.icon"></i>
+              </div>
+              <div>
+                <h3>{{ selected.name }}</h3>
+                <p class="architecture__inspector-sub">{{ selected.subtitle }}</p>
+              </div>
+            </div>
+
+            <p class="architecture__inspector-desc">{{ selected.roleFr }}</p>
+
+            <div class="architecture__inspector-grid">
+              <div class="architecture__inspector-block">
+                <h4><i class="fa-solid fa-microchip"></i> Technologies clés</h4>
+                <div class="architecture__tags">
+                  @for (tech of selected.techs; track tech) {
+                    <span class="arch-tag">{{ tech }}</span>
+                  }
+                </div>
+              </div>
+
+              <div class="architecture__inspector-block">
+                <h4><i class="fa-solid fa-gears"></i> Patterns & Principes appliqués</h4>
+                <div class="architecture__tags">
+                  @for (pattern of selected.patternsFr; track pattern) {
+                    <span class="arch-tag arch-tag--pattern">{{ pattern }}</span>
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    }
+
+    <!-- TAB 2: Hexagonal Architecture -->
+    @if (activeTab === 'hexagonal') {
+      <div class="architecture__hex-container card">
+        <div class="architecture__hex-header">
+          <h3><i class="fa-solid fa-shapes"></i> Pattern Architecture Hexagonale (Ports & Adapters)</h3>
+          <p>Isolation rigoureuse de la logique métier (Domain) par rapport aux détails d'infrastructure et frameworks.</p>
+        </div>
+
+        <div class="architecture__hex-grid">
+          <!-- Primary Adapters -->
+          <div class="architecture__hex-box arch-box--adapters-left">
+            <div class="arch-box__title"><i class="fa-solid fa-input-numeric"></i> Adaptateurs Entrants (Driving)</div>
+            <ul>
+              <li><i class="fa-solid fa-globe"></i> REST Controllers (Spring MVC)</li>
+              <li><i class="fa-solid fa-envelope"></i> Message Listeners (RabbitMQ)</li>
+              <li><i class="fa-solid fa-terminal"></i> CLI / Cron Jobs</li>
+            </ul>
+          </div>
+
+          <!-- Hexagon Core -->
+          <div class="architecture__hex-box arch-box--core">
+            <div class="arch-box__title"><i class="fa-solid fa-brain"></i> Domaine Core (Pure Java 21)</div>
+            <div class="arch-core__content">
+              <div class="arch-core__pill"><i class="fa-solid fa-cube"></i> Domain Entities & Aggregates</div>
+              <div class="arch-core__pill"><i class="fa-solid fa-diagram-project"></i> Domain Services & Use Cases</div>
+              <div class="arch-core__pill"><i class="fa-solid fa-plug"></i> Input & Output Ports (Interfaces)</div>
+            </div>
+          </div>
+
+          <!-- Secondary Adapters -->
+          <div class="architecture__hex-box arch-box--adapters-right">
+            <div class="arch-box__title"><i class="fa-solid fa-output-numeric"></i> Adaptateurs Sortants (Driven)</div>
+            <ul>
+              <li><i class="fa-solid fa-database"></i> Repositories JPA / PostgreSQL</li>
+              <li><i class="fa-solid fa-paper-plane"></i> RabbitMQ Message Publishers</li>
+              <li><i class="fa-solid fa-cloud"></i> RestClient HTTP External APIs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    }
+
+    <!-- TAB 3: UML & Security Flow -->
+    @if (activeTab === 'uml') {
+      <div class="architecture__uml-container card">
+        <div class="architecture__hex-header">
+          <h3><i class="fa-solid fa-shield-halved"></i> Diagramme de Séquence : Security OAuth2 & Keycloak Flow</h3>
+          <p>Flux complet d'authentification centralisée et transmission de jetons JWT sécurisés.</p>
+        </div>
+
+        <div class="architecture__sequence-diagram">
+          <div class="seq-step">
+            <span class="seq-num">1</span>
+            <div class="seq-content">
+              <strong>User → Angular SPA</strong>
+              <p>Connexion demandée (Auth Guard). Redirection vers le serveur Keycloak via OAuth2 PKCE Authorization Code Flow.</p>
+            </div>
+          </div>
+
+          <div class="seq-step">
+            <span class="seq-num">2</span>
+            <div class="seq-content">
+              <strong>Keycloak IAM → Angular SPA</strong>
+              <p>Authentification réussie. Émission d'un Access Token JWT signé RSA256 contenant les rôles de l'utilisateur.</p>
+            </div>
+          </div>
+
+          <div class="seq-step">
+            <span class="seq-num">3</span>
+            <div class="seq-content">
+              <strong>Angular SPA → Spring Cloud Gateway</strong>
+              <p>Requête HTTP envoyée avec l'en-tête <code>Authorization: Bearer &lt;JWT&gt;</code>. Validé à l'Edge par la Gateway.</p>
+            </div>
+          </div>
+
+          <div class="seq-step">
+            <span class="seq-num">4</span>
+            <div class="seq-content">
+              <strong>Gateway → Microservices Spring Boot</strong>
+              <p>Relai du jeton validé + injection de l'en-tête de corrélation <code>X-Correlation-ID</code> pour le tracing OpenTelemetry.</p>
+            </div>
+          </div>
+
+          <div class="seq-step">
+            <span class="seq-num">5</span>
+            <div class="seq-content">
+              <strong>Microservice → RabbitMQ & PostgreSQL</strong>
+              <p>Exécution des opérations métier isolées en base de données et émission d'événements asynchrones sécurisés.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+
+    <!-- Principles list -->
+    <div class="architecture__principles">
+      @for (principle of principles; track principle.title) {
+        <div class="architecture__principle card">
+          <i [class]="principle.icon"></i>
+          <h4>{{ principle.title }}</h4>
+          <p>{{ principle.desc }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

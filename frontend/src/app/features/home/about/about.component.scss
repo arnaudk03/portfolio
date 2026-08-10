@@ -1,0 +1,36 @@
+@reference "../../../../styles.scss";
+
+.about {
+  background: var(--bg-secondary);
+}
+
+.about__grid {
+  @apply grid gap-10 lg:grid-cols-2 lg:items-center;
+}
+
+.about__text {
+  @apply space-y-4 text-base leading-relaxed;
+  color: var(--text-muted);
+
+  p:first-child {
+    @apply text-lg font-medium;
+    color: var(--text);
+  }
+}
+
+.about__highlights {
+  @apply grid grid-cols-2 gap-4;
+}
+
+.about__stat {
+  @apply flex flex-col items-center text-center;
+}
+
+.about__stat-value {
+  @apply font-display text-3xl font-bold text-primary;
+}
+
+.about__stat-label {
+  @apply mt-1 text-sm;
+  color: var(--text-muted);
+}

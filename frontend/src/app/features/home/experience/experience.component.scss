@@ -1,0 +1,61 @@
+@reference "../../../../styles.scss";
+
+.experience {
+  background: var(--bg-secondary);
+}
+
+.experience__timeline {
+  @apply relative mx-auto max-w-2xl;
+
+  &::before {
+    content: '';
+    @apply absolute left-6 top-0 h-full w-0.5 md:left-1/2 md:-translate-x-px;
+    background: var(--border);
+  }
+}
+
+.experience__item {
+  @apply relative mb-10 pl-16 md:pl-0;
+
+  &:nth-child(odd) .experience__content {
+    @apply md:mr-[calc(50%+2rem)];
+  }
+
+  &:nth-child(even) .experience__content {
+    @apply md:ml-[calc(50%+2rem)];
+  }
+}
+
+.experience__marker {
+  @apply absolute left-0 top-0 z-10 md:left-1/2 md:-translate-x-1/2;
+}
+
+.experience__year {
+  @apply inline-flex min-h-12 min-w-12 max-w-28 items-center justify-center rounded-full px-3 py-1 text-center text-xs font-bold leading-tight shadow-sm transition-all;
+  background: var(--card);
+  color: var(--text);
+  border: 2px solid var(--border);
+}
+
+.experience__item--active .experience__year {
+  background: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+  @apply shadow-md;
+}
+
+.experience__content {
+  h3 {
+    @apply mb-1 font-display text-lg font-semibold;
+    color: var(--text);
+  }
+}
+
+.experience__company {
+  @apply mb-2 text-sm font-medium text-primary;
+}
+
+.experience__desc {
+  @apply text-sm leading-relaxed;
+  color: var(--text-muted);
+}

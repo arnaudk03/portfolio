@@ -1,0 +1,92 @@
+<div class="project-detail">
+  <div class="section-container">
+    <a routerLink="/" fragment="projects" class="project-detail__back">
+      <i class="fa-solid fa-arrow-left"></i>
+      {{ 'PROJECTS.BACK' | translate }}
+    </a>
+
+    @if (project) {
+      <header class="project-detail__header">
+        @if (project.image) {
+          <div class="project-detail__hero-img-wrapper">
+            <img [src]="project.image" [alt]="localized(project.name)" class="project-detail__hero-img" />
+          </div>
+        } @else {
+          <div class="project-detail__icon">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+        }
+        <h1>{{ localized(project.name) }}</h1>
+        <p class="project-detail__tagline">{{ localized(project.description) }}</p>
+
+        <div class="project-detail__actions">
+          @if (project.github) {
+            <a [href]="project.github" target="_blank" rel="noopener noreferrer" class="btn-primary">
+              <i class="fa-brands fa-github"></i> Repository GitHub
+            </a>
+          }
+          @if (project.demo) {
+            <a [href]="project.demo" target="_blank" rel="noopener noreferrer" class="btn-outline">
+              <i class="fa-solid fa-external-link"></i> Démonstration Live
+            </a>
+          }
+        </div>
+      </header>
+
+      @if (project.layers.length) {
+        <section class="project-detail__section card">
+          <h2>{{ 'PROJECTS.ARCHITECTURE' | translate }}</h2>
+          <p class="project-detail__arch-desc">{{ localized(project.architecture) }}</p>
+          <div class="project-detail__layers">
+            @for (layer of project.layers; track layer; let last = $last) {
+              <span class="project-detail__layer">{{ layer }}</span>
+              @if (!last) {
+                <i class="fa-solid fa-chevron-right"></i>
+              }
+            }
+          </div>
+        </section>
+      }
+
+      <section class="project-detail__section card">
+        <h2>{{ 'PROJECTS.TECHNOLOGIES' | translate }}</h2>
+        <div class="project-detail__tags">
+          @for (tech of project.technologies; track tech) {
+            <span>{{ tech }}</span>
+          }
+        </div>
+      </section>
+
+      <section class="project-detail__section card">
+        <h2>{{ 'PROJECTS.FEATURES' | translate }}</h2>
+        <ul>
+          @for (feature of project.features; track $index) {
+            <li><i class="fa-solid fa-check"></i> {{ localized(feature) }}</li>
+          }
+        </ul>
+      </section>
+
+      @if (project.challenges.length) {
+        <section class="project-detail__section card">
+          <h2>{{ 'PROJECTS.CHALLENGES' | translate }}</h2>
+          <ul class="project-detail__challenges">
+            @for (challenge of project.challenges; track $index) {
+              <li><i class="fa-solid fa-bolt"></i> {{ localized(challenge) }}</li>
+            }
+          </ul>
+        </section>
+      }
+
+      @if (project.results.length) {
+        <section class="project-detail__section card">
+          <h2>{{ 'PROJECTS.RESULTS' | translate }}</h2>
+          <ul class="project-detail__results">
+            @for (result of project.results; track $index) {
+              <li><i class="fa-solid fa-chart-line"></i> {{ localized(result) }}</li>
+            }
+          </ul>
+        </section>
+      }
+    }
+  </div>
+</div>

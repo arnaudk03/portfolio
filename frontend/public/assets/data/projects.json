@@ -1,0 +1,475 @@
+[
+  {
+    "id": "e-activite",
+    "name": {
+      "fr": "E-activite — Plateforme de Suivi Administratif",
+      "en": "E-activite — Administrative Activity Platform"
+    },
+    "description": {
+      "fr": "Solution numérique intégrée pour moderniser et optimiser la gestion des activités au sein de la DGTD (Direction Générale des Transformation Digitale) du MTDPCE — Burkina Faso. Dématérialisation complète des processus RH, congés et communications officielles.",
+      "en": "Integrated digital platform to modernize and optimize activity management within the DGTD of Burkina Faso's Digital Transition Ministry. Full dematerialization of HR processes, leave management and official communications."
+    },
+    "architecture": {
+      "fr": "Architecture découplée Frontend/Backend avec API REST Spring Boot 3.1 (Java 17), SPA Angular 19 interfacée via Spring Security JWT. Déploiement sur Nginx/Nginx avec profils de configuration Dev/Prod. Base de données PostgreSQL (prod) et MySQL (dev). Génération de documents administratifs PDF via OpenPDF.",
+      "en": "Decoupled Frontend/Backend architecture with Spring Boot 3.1 REST API (Java 17), Angular 19 SPA secured via Spring Security JWT. Deployment on Nginx with Dev/Prod configuration profiles. PostgreSQL (prod) / MySQL (dev). Administrative PDF document generation via OpenPDF."
+    },
+    "technologies": [
+      "Java 17",
+      "Spring Boot 3.1",
+      "Spring Security",
+      "JWT",
+      "Angular 19",
+      "Angular Material",
+      "PostgreSQL",
+      "MySQL",
+      "OpenPDF",
+      "Chart.js",
+      "MapStruct"
+    ],
+    "categories": [
+      "java",
+      "angular",
+      "architecture"
+    ],
+    "layers": [
+      "Angular 19 SPA",
+      "Spring Security / JWT",
+      "Spring Boot 3.1 API",
+      "MapStruct DTOs",
+      "PostgreSQL"
+    ],
+    "features": [
+      {
+        "fr": "Tableau de bord décisionnel avec visualisation des statistiques clés (taux d'exécution, absences)",
+        "en": "Decision-making dashboard with key KPI visualization (execution rates, absences)"
+      },
+      {
+        "fr": "Workflow de congés complet : demande, circuit d'approbation multi-niveaux et imputation automatique sur solde",
+        "en": "Complete leave workflow: request, multi-level approval circuit and automatic balance deduction"
+      },
+      {
+        "fr": "Système de Scopes de Diffusion pour cibler la visibilité des communications officielles (Ministère, Inter-ministériel…)",
+        "en": "Diffusion Scopes system to target the visibility of official communications (Ministry, Inter-ministerial…)"
+      },
+      {
+        "fr": "Gestion des permissions granulaires et journal d'audit exhaustif pour la traçabilité et l'intégrité",
+        "en": "Granular permission management and full audit trail for traceability and data integrity"
+      },
+      {
+        "fr": "Interface d'administration complète : utilisateurs, organigramme, types d'activités",
+        "en": "Full admin interface: users, org chart, activity types"
+      }
+    ],
+    "challenges": [
+      {
+        "fr": "Modélisation des Scopes de Diffusion métier pour une communication ciblée (STRUCTURE_UNIQUEMENT → INTER_MINISTERIEL) sans couplage fort",
+        "en": "Modeling business Diffusion Scopes for targeted communication (STRUCTURE_ONLY → INTER_MINISTERIAL) without tight coupling"
+      },
+      {
+        "fr": "Automatisation du calcul des soldes de congés avec gestion des chevauchements et des jours fériés",
+        "en": "Automating leave balance calculation with overlap handling and public holiday management"
+      }
+    ],
+    "results": [
+      {
+        "fr": "Dématérialisation complète du processus de gestion des congés au sein du MTDPCE — Burkina Faso",
+        "en": "Full dematerialization of the leave management process within Burkina Faso's MTDPCE"
+      },
+      {
+        "fr": "Réduction significative des délais de traitement des demandes administratives grâce au workflow automatisé",
+        "en": "Significant reduction in administrative request processing times thanks to automated workflow"
+      },
+      {
+        "fr": "Traçabilité et transparence totales des activités via le journal d'audit et les tableaux de bord",
+        "en": "Full activity traceability and transparency via audit trail and dashboards"
+      }
+    ],
+    "image": "/assets/images/e-activite.png"
+  },
+  {
+    "id": "referentiel-it",
+    "name": {
+      "fr": "Référentiel de Compétences IT — DGTD",
+      "en": "IT Skills Repository — DGTD"
+    },
+    "description": {
+      "fr": "Plateforme stratégique de gestion des compétences IT basée sur le framework SFIA pour le Ministère de la Transition Digitale, des Postes et de la Communication (MTDPCE) du Burkina Faso. Pilotage de la trajectoire professionnelle, matching de mobilité interne, plans de succession et suivi budgétaire des formations.",
+      "en": "Strategic IT skills management platform built on the SFIA framework for Burkina Faso's Ministry of Digital Transition, Posts and Communication (MTDPCE). Manages career trajectories, internal mobility matching, succession planning and training budget tracking."
+    },
+    "architecture": {
+      "fr": "Architecture MVC Spring Boot 3.4 (Java 17) avec API REST documentée Swagger, authentification JWT stateless, moteur de matching propriétaire et export Excel via xlsx-js-style. Frontend Angular 19 avec Angular Material (Glassmorphism UI). Base PostgreSQL / JPA Hibernate.",
+      "en": "MVC Spring Boot 3.4 (Java 17) with Swagger-documented REST API, stateless JWT authentication, proprietary matching engine, and Excel export via xlsx-js-style. Angular 19 with Angular Material (Glassmorphism UI). PostgreSQL / JPA Hibernate."
+    },
+    "technologies": [
+      "Java 17",
+      "Spring Boot 3.4",
+      "JWT Security",
+      "Angular 19",
+      "Angular Material",
+      "PostgreSQL",
+      "JPA/Hibernate",
+      "Apache PDFBox",
+      "xlsx-js-style"
+    ],
+    "categories": [
+      "java",
+      "angular",
+      "architecture"
+    ],
+    "layers": [
+      "Angular 19 (Glassmorphism)",
+      "Spring Boot 3.4 REST API",
+      "JWT Security Filter",
+      "Matching Engine",
+      "JPA / PostgreSQL"
+    ],
+    "features": [
+      {
+        "fr": "Auto-évaluation SFIA dynamique par niveaux (Débutant → Expert) avec score global calculé automatiquement",
+        "en": "Dynamic SFIA self-assessment by skill level (Beginner → Expert) with auto-calculated global score"
+      },
+      {
+        "fr": "Moteur de matching : calcul d'un score d'adéquation collaborateur ↔ poste cible avec analyse des écarts compétence par compétence",
+        "en": "Matching engine: employee ↔ target position compatibility score with skill-by-skill gap analysis"
+      },
+      {
+        "fr": "Plan de Développement Individuel (PDI) avec recommandations automatiques de formations basées sur les gaps SFIA détectés",
+        "en": "Individual Development Plan (PDI) with automatic training recommendations based on detected SFIA gaps"
+      },
+      {
+        "fr": "Gestion des successions : identification et classement automatique des Top 5 candidats pour les postes clés (badges Or/Argent/Bronze)",
+        "en": "Succession planning: automatic identification and ranking of Top 5 candidates for key positions (Gold/Silver/Bronze badges)"
+      },
+      {
+        "fr": "Pilotage stratégique IT : analyse des 5 compétences au plus fort écart collectif, maturité par famille métier, suivi budgétaire",
+        "en": "Strategic IT piloting: top 5 collective skill gaps, maturity by job family, training budget tracking"
+      },
+      {
+        "fr": "Export matriciel Excel enrichi (couleurs, volets figés, filtres auto) et export PDF individuel",
+        "en": "Enriched Excel matrix export (colors, frozen panes, auto filters) and individual PDF export"
+      },
+      {
+        "fr": "Onboarding self-service : saisie matricule → complétion profil → création automatique de compte",
+        "en": "Self-service onboarding: enter badge number → complete profile → automatic account creation"
+      }
+    ],
+    "challenges": [
+      {
+        "fr": "Conception du moteur de matching propriétaire pour calculer un score d'adéquation fiable en tenant compte des séniorités SFIA multi-niveaux (Assistant / Junior / Senior)",
+        "en": "Designing the proprietary matching engine to compute a reliable compatibility score accounting for SFIA multi-level seniorities (Assistant / Junior / Senior)"
+      },
+      {
+        "fr": "Gestion des droits et confidentialité : ségrégation stricte des accès au plan de succession (réservé Admin) sans complexifier l'architecture de sécurité JWT",
+        "en": "Rights management and confidentiality: strict access segregation for succession planning (Admin-only) without overcomplicating the JWT security architecture"
+      }
+    ],
+    "results": [
+      {
+        "fr": "Centralisation de l'ensemble du référentiel SFIA du MTDPCE (Burkina Faso) : familles, compétences, profils métiers, matrice profil↔compétence",
+        "en": "Full centralization of DGTD's SFIA repository (Burkina Faso): families, skills, job profiles, profile↔skill matrix"
+      },
+      {
+        "fr": "Réduction du temps de décision RH sur la mobilité interne grâce au moteur de matching automatisé (simulation en temps réel)",
+        "en": "Reduced HR decision time on internal mobility through automated matching engine (real-time simulation)"
+      },
+      {
+        "fr": "Module de pilotage stratégique permettant au top management de visualiser les risques IT collectifs et de piloter le budget formation",
+        "en": "Strategic dashboard module allowing top management to visualize collective IT risks and control the training budget"
+      }
+    ],
+    "image": "/assets/images/referentiel-it.png"
+  },
+  {
+    "id": "fasopharma",
+    "name": {
+      "fr": "PharmaStock — Gestion de Stock Multi-sites",
+      "en": "PharmaStock — Multi-site Pharmaceutical Stock"
+    },
+    "description": {
+      "fr": "Plateforme web sécurisée de gestion des stocks pharmaceutiques à travers plusieurs sites (Dépôts, Pharmacies, Services). Suivi rigoureux par numéro de lot et date de péremption, gestion des ventes, inventaires, alertes de rupture et reporting PDF/Excel.",
+      "en": "Secure web platform for pharmaceutical stock management across multiple sites (Depots, Pharmacies, Services). Rigorous lot-number and expiry tracking, sales management, inventory, shortage alerts, and PDF/Excel reporting."
+    },
+    "architecture": {
+      "fr": "Architecture multi-tiers containerisée Docker : Angular 17 frontend sur Nginx, Spring Boot 3.2.5 (Java 17) backend REST, base PostgreSQL 15. Sécurité JWT stateless avec CORS restrictif et rate limiting sur les connexions. Pagination serveur et indexation SQL sur les colonnes de recherche clés.",
+      "en": "Dockerized multi-tier: Angular 17 frontend on Nginx, Spring Boot 3.2.5 (Java 17) REST backend, PostgreSQL 15 database. Stateless JWT security with restrictive CORS and login rate limiting. Server-side pagination and SQL indexing on key search columns."
+    },
+    "technologies": [
+      "Java 17",
+      "Spring Boot 3.2.5",
+      "Spring Security",
+      "JWT",
+      "Angular 17",
+      "Angular Material",
+      "PostgreSQL 15",
+      "OpenPDF",
+      "Apache POI",
+      "Docker Compose"
+    ],
+    "categories": [
+      "java",
+      "angular",
+      "devops"
+    ],
+    "layers": [
+      "Angular 17 / Nginx",
+      "Spring Boot 3.2.5 REST",
+      "JWT Security + Rate Limiting",
+      "JPA / Hibernate",
+      "PostgreSQL 15"
+    ],
+    "features": [
+      {
+        "fr": "Suivi des stocks par lot (numéro de lot, date de péremption) avec alertes automatiques de dépassement et de rupture imminente",
+        "en": "Stock tracking by lot (lot number, expiry date) with automatic expiry and shortage alert notifications"
+      },
+      {
+        "fr": "Processus de vente/sortie atomique : validation de la disponibilité, décrémentation du lot, enregistrement du mouvement de stock (Type: OUT)",
+        "en": "Atomic sale/issue process: availability validation, lot decrement, stock movement recording (Type: OUT)"
+      },
+      {
+        "fr": "Hiérarchie multi-sites (Organization → Site → ParentSite) permettant la gestion de réseaux de pharmacies régionales",
+        "en": "Multi-site hierarchy (Organization → Site → ParentSite) for managing regional pharmacy networks"
+      },
+      {
+        "fr": "Exports PDF et Excel des inventaires et mouvements de stock (Apache POI + OpenPDF)",
+        "en": "PDF and Excel export of inventories and stock movements (Apache POI + OpenPDF)"
+      }
+    ],
+    "challenges": [
+      {
+        "fr": "Garantie d'atomicité des processus de vente et de transfert inter-sites pour éviter les incohérences de stock en environnement multi-utilisateurs",
+        "en": "Guaranteeing atomicity of sale and inter-site transfer processes to prevent stock inconsistencies in multi-user environments"
+      },
+      {
+        "fr": "Modélisation de la hiérarchie multi-sites flexible (parentSite) tout en maintenant des performances optimales sur les requêtes de consolidation de stocks",
+        "en": "Flexible multi-site hierarchy modeling (parentSite) while maintaining optimal performance on stock consolidation queries"
+      }
+    ],
+    "results": [
+      {
+        "fr": "Zéro rupture de stock non détectée grâce aux alertes automatiques de péremption et de stock bas",
+        "en": "Zero undetected stock shortages thanks to automatic expiry and low-stock alerts"
+      },
+      {
+        "fr": "Traçabilité complète de chaque lot médicamenteux de la réception à la dispensation, conforme aux exigences réglementaires pharmaceutiques",
+        "en": "Full traceability of every drug lot from reception to dispensing, complying with pharmaceutical regulatory requirements"
+      }
+    ],
+    "image": "/assets/images/fasopharma.png"
+  },
+  {
+    "id": "e-commune",
+    "name": {
+      "fr": "e-CommuneData — Référentiel National des Localités",
+      "en": "e-CommuneData — National Locality Repository (RCDL)"
+    },
+    "description": {
+      "fr": "Référentiel Commun des Données de Localité (RCDL) — Système centralisé de référence nationale pour les données géographiques (Pays, Régions, Provinces, Communes, Secteurs, Villages) partagé entre plusieurs ministères du Burkina Faso. Architecture microservices avec audit légal via Kafka.",
+      "en": "Référentiel Commun des Données de Localité (RCDL) — National centralized reference for geographic data (Countries, Regions, Provinces, Communes, Sectors, Villages) shared across multiple Burkina Faso ministries. Microservices with legal audit via Kafka."
+    },
+    "architecture": {
+      "fr": "Architecture microservices : Locality Service (cœur métier — gestion des entités géographiques hiérarchiques) + Audit Service (traçabilité légale via Kafka). Optimisation hiérarchique par Closure Table PostgreSQL pour des requêtes multi-niveaux en O(1). Keycloak pour l'IAM OAuth2/JWT, Redis pour le cache.",
+      "en": "Microservices architecture: Locality Service (business core — hierarchical geographic entity management) + Audit Service (legal traceability via Kafka). Hierarchy optimized via PostgreSQL Closure Table for O(1) multi-level queries. Keycloak for OAuth2/JWT IAM, Redis for caching."
+    },
+    "technologies": [
+      "Java 17",
+      "Spring Boot 3.1",
+      "Keycloak",
+      "OAuth2 / JWT",
+      "Kafka",
+      "PostgreSQL",
+      "Redis",
+      "Docker Compose"
+    ],
+    "categories": [
+      "java",
+      "architecture",
+      "devops"
+    ],
+    "layers": [
+      "Client (REST/JWT)",
+      "Locality Service",
+      "Audit Service (Kafka Consumer)",
+      "Keycloak IAM",
+      "PostgreSQL + Closure Table",
+      "Redis Cache"
+    ],
+    "features": [
+      {
+        "fr": "Gestion hiérarchique complète des localités nationales : Pays → Régions → Provinces → Communes → Secteurs → Villages",
+        "en": "Full hierarchical management of national localities: Country → Regions → Provinces → Communes → Sectors → Villages"
+      },
+      {
+        "fr": "Performance des requêtes hiérarchiques grâce au pattern Closure Table (descendants en une seule jointure SQL)",
+        "en": "Hierarchical query performance via Closure Table pattern (all descendants in a single SQL join)"
+      },
+      {
+        "fr": "Traçabilité légale des modifications via bus de messages Kafka (Audit Service consommateur asynchrone)",
+        "en": "Legal traceability of changes via Kafka message bus (asynchronous Audit Service consumer)"
+      },
+      {
+        "fr": "Sécurisation inter-ministérielle : rôles Keycloak ADMIN (écriture) et MINISTERE (lecture seule)",
+        "en": "Inter-ministry security: Keycloak roles ADMIN (write) and MINISTERE (read-only)"
+      },
+      {
+        "fr": "API REST documentée Swagger avec endpoints hiérarchiques (enfants directs + descendants récursifs)",
+        "en": "Swagger-documented REST API with hierarchical endpoints (direct children + recursive descendants)"
+      }
+    ],
+    "challenges": [
+      {
+        "fr": "Choix du pattern Closure Table face aux alternatives (Adjacency List, Nested Set, Materialized Path) pour garantir des performances constantes sur les requêtes de descendants multi-niveaux à l'échelle nationale",
+        "en": "Choosing the Closure Table pattern over alternatives (Adjacency List, Nested Set, Materialized Path) to guarantee constant query performance for multi-level descendants at national scale"
+      },
+      {
+        "fr": "Mise en place de la communication asynchrone inter-services Kafka pour l'audit légal tout en garantissant l'ordering des événements par entité géographique",
+        "en": "Implementing async inter-service Kafka communication for legal audit while ensuring event ordering per geographic entity"
+      }
+    ],
+    "results": [
+      {
+        "fr": "Référentiel national centralisé utilisable par plusieurs ministères via une API sécurisée OAuth2/Keycloak",
+        "en": "National centralized reference consumable by multiple ministries via a secure OAuth2/Keycloak API"
+      },
+      {
+        "fr": "Requêtes hiérarchiques ultra-performantes : récupération de l'ensemble des localités d'une région (N niveaux) en une seule jointure SQL grâce à la Closure Table",
+        "en": "Ultra-performant hierarchical queries: retrieve all localities of a region (N levels) in a single SQL join via Closure Table"
+      }
+    ],
+    "image": "/assets/images/e-commune.png"
+  },
+  {
+    "id": "tontines",
+    "name": {
+      "fr": "Application de Tontines (Épargne Collective Mobile)",
+      "en": "Tontine App — Mobile Collective Savings"
+    },
+    "description": {
+      "fr": "Application mobile Flutter de gestion de tontines (épargne collective). Suivi des cotisations, tirages au sort, notifications push Firebase et mode offline-first avec synchronisation SQLite locale vers backend PostgreSQL.",
+      "en": "Flutter mobile application for tontine (collective savings) management. Contribution tracking, lottery draws, Firebase push notifications, and offline-first architecture with local SQLite sync to PostgreSQL backend."
+    },
+    "architecture": {
+      "fr": "Application mobile Flutter offline-first avec backend Spring Boot REST API. Architecture offline-first : persistance locale SQLite (CRDT simplifié pour resolution de conflits) + synchronisation différentielle vers backend PostgreSQL. Notifications push Firebase Cloud Messaging.",
+      "en": "Offline-first Flutter mobile app with Spring Boot REST API backend. Offline-first architecture: local SQLite persistence (simplified CRDT for conflict resolution) + differential sync to PostgreSQL backend. Firebase Cloud Messaging push notifications."
+    },
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "SQLite",
+      "Firebase FCM"
+    ],
+    "categories": [
+      "flutter",
+      "java"
+    ],
+    "layers": [
+      "Flutter App (Offline-first)",
+      "SQLite Local Cache",
+      "Spring Boot API",
+      "PostgreSQL",
+      "Firebase Push"
+    ],
+    "features": [
+      {
+        "fr": "Création et gestion de groupes de tontine avec suivi des membres et des cycles d'épargne",
+        "en": "Tontine group creation and management with member tracking and savings cycle management"
+      },
+      {
+        "fr": "Mode offline complet : saisie des cotisations sans connexion, synchronisation automatique à la reconnexion",
+        "en": "Full offline mode: record contributions without connectivity, automatic sync on reconnection"
+      },
+      {
+        "fr": "Notifications push Firebase pour les rappels de cotisations et les annonces de tirage au sort",
+        "en": "Firebase push notifications for contribution reminders and lottery draw announcements"
+      },
+      {
+        "fr": "Suivi des cotisations et remboursements avec historique complet et export des relevés",
+        "en": "Contribution and reimbursement tracking with full history and statement export"
+      }
+    ],
+    "challenges": [
+      {
+        "fr": "Mode offline avec synchronisation conflict-free basée sur un CRDT simplifié pour résoudre les conflits de données entre l'état local SQLite et le backend PostgreSQL",
+        "en": "Offline mode with conflict-free sync using a simplified CRDT to resolve data conflicts between local SQLite state and PostgreSQL backend"
+      }
+    ],
+    "results": [
+      {
+        "fr": "Application déployée avec 200+ utilisateurs actifs gérant leurs tontines depuis mobile",
+        "en": "Application deployed with 200+ active users managing their tontines from mobile"
+      }
+    ],
+    "image": "/assets/images/tontines.png"
+  },
+  {
+    "id": "portfolio",
+    "name": {
+      "fr": "Portfolio Architecte & Vitrine Technique",
+      "en": "Architect Portfolio & Technical Showcase"
+    },
+    "description": {
+      "fr": "Plateforme web moderne conteneurisée servant de vitrine professionnelle et de démonstrateur d'architecture logicielle. Présentation des réalisations d'entreprise, du parcours ministériel et de l'expertise technique avec conteneurisation Docker et intégration continue.",
+      "en": "Modern containerized web platform serving as a professional showcase and software architecture demonstrator. Showcases enterprise projects, ministerial career and technical expertise with Docker containerization."
+    },
+    "architecture": {
+      "fr": "Architecture découplée conteneurisée : SPA Angular 19 (Control Flow, i18n, Vanilla CSS) servie par Nginx avec invalidation stricte du cache statique, et Backend Spring Boot 3.x (Java 21) REST avec service d'envoi d'emails. Déploiement multi-services via Docker Compose et automatisation CI/CD.",
+      "en": "Decoupled containerized architecture: Angular 19 SPA (Control Flow, i18n, Vanilla CSS) served by Nginx with strict static cache invalidation, and Spring Boot 3.x (Java 21) REST Backend with email delivery. Multi-service deployment via Docker Compose and CI/CD automation."
+    },
+    "technologies": [
+      "Java 21",
+      "Spring Boot 3.x",
+      "Angular 19",
+      "TypeScript",
+      "Vanilla CSS",
+      "Docker",
+      "Docker Compose",
+      "Nginx"
+    ],
+    "categories": [
+      "java",
+      "angular",
+      "architecture",
+      "devops"
+    ],
+    "layers": [
+      "Angular 19 SPA",
+      "Nginx Web Server",
+      "Spring Boot 3 REST API",
+      "Docker Containerization"
+    ],
+    "features": [
+      {
+        "fr": "Design responsive premium avec animations fluides et gestion multilingue i18n (FR/EN)",
+        "en": "Premium responsive design with fluid animations and multilingual i18n (FR/EN)"
+      },
+      {
+        "fr": "Téléchargement direct et sécurisé du CV officiel au format PDF",
+        "en": "Direct and secure official PDF resume download"
+      },
+      {
+        "fr": "Formulaire de contact dynamique relié au service Mail Java Backend",
+        "en": "Dynamic contact form connected to Java Backend Mail service"
+      },
+      {
+        "fr": "Stratégie de cache Nginx (Cache-Control: no-cache) pour garantir la fraîcheur des données JSON et images sans délai",
+        "en": "Nginx cache strategy (Cache-Control: no-cache) guaranteeing immediate fresh JSON and image data loading"
+      }
+    ],
+    "challenges": [
+      {
+        "fr": "Configuration des en-têtes HTTP Nginx pour éliminer la persistance du cache navigateur sur les assets statiques dynamiques",
+        "en": "Configuring Nginx HTTP headers to eliminate persistent browser caching on dynamic static assets"
+      }
+    ],
+    "results": [
+      {
+        "fr": "Vitrine professionnelle haute performance, conteneurisée et prête pour la production",
+        "en": "High-performance, containerized professional portfolio ready for production deployment"
+      }
+    ],
+    "image": "/assets/images/portfolio.png"
+  }
+]

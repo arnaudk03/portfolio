@@ -1,0 +1,29 @@
+<section class="certifications" id="certifications">
+  <div class="section-container">
+    <app-section-title titleKey="CERTIFICATIONS.TITLE" subtitleKey="CERTIFICATIONS.SUBTITLE" />
+    <div class="certifications__grid">
+      @for (cert of certifications; track cert.name) {
+        <div class="certifications__card card">
+          <div class="certifications__icon">
+            <i [class]="cert.icon ?? 'fa-solid fa-certificate'"></i>
+          </div>
+          <div class="certifications__body">
+            <h3>{{ cert.name }}</h3>
+            <p class="certifications__issuer">{{ cert.issuer }}</p>
+            <div class="certifications__footer">
+              @if (cert.year) {
+                <span class="certifications__year">{{ cert.year }}</span>
+              }
+              @if (cert.credentialUrl) {
+                <a [href]="cert.credentialUrl" target="_blank" rel="noopener noreferrer" class="certifications__verify">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  {{ 'CERTIFICATIONS.VERIFY' | translate }}
+                </a>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

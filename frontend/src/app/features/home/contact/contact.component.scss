@@ -1,0 +1,94 @@
+@reference "../../../../styles.scss";
+
+.contact__grid {
+  @apply grid gap-10 lg:grid-cols-5;
+}
+
+.contact__info {
+  @apply lg:col-span-2;
+
+  p {
+    @apply mb-6 text-base leading-relaxed;
+    color: var(--text-muted);
+  }
+
+  ul {
+    @apply space-y-4;
+  }
+
+  li {
+    @apply flex items-center gap-3 text-sm;
+
+    i {
+      @apply w-5 text-primary;
+    }
+
+    a {
+      @apply text-primary hover:underline;
+    }
+
+    span {
+      color: var(--text-muted);
+    }
+  }
+}
+
+.contact__form {
+  @apply lg:col-span-3;
+}
+
+.contact__field {
+  @apply mb-4;
+
+  label {
+    @apply mb-1 block text-sm font-medium;
+    color: var(--text);
+  }
+
+  input,
+  textarea {
+    @apply w-full rounded-lg border px-4 py-3 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20;
+    background: var(--bg);
+    border-color: var(--border);
+    color: var(--text);
+  }
+}
+
+.contact__feedback {
+  @apply mb-4 flex items-center gap-2 rounded-lg px-4 py-3 text-sm;
+
+  &--success {
+    @apply bg-green-500/10 text-green-600;
+  }
+
+  &--error {
+    @apply bg-red-500/10 text-red-600;
+  }
+}
+
+.contact__submit {
+  @apply w-full;
+
+  &:disabled {
+    @apply cursor-not-allowed opacity-60;
+  }
+}
+
+.contact__qr {
+  @apply flex items-center gap-4;
+
+  img {
+    @apply rounded-lg;
+    border: 1px solid var(--border);
+  }
+}
+
+.contact__qr-title {
+  @apply mb-1 text-sm font-semibold;
+  color: var(--text);
+}
+
+.contact__qr-desc {
+  @apply text-xs leading-relaxed;
+  color: var(--text-muted);
+}

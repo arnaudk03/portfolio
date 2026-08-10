@@ -1,0 +1,76 @@
+@reference "../../../../styles.scss";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: var(--header-bg);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header__inner {
+  @apply mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8;
+}
+
+.header__logo {
+  @apply flex items-center gap-2;
+}
+
+.header__logo-mark {
+  @apply flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-sm font-bold text-white;
+}
+
+.header__logo-text {
+  @apply hidden font-display text-sm font-semibold sm:block;
+  color: var(--text);
+}
+
+.header__nav {
+  @apply hidden items-center gap-1 md:flex;
+}
+
+.header__nav--open {
+  @apply absolute left-0 right-0 top-full flex flex-col border-b p-4 md:static md:flex-row md:border-0 md:p-0;
+  background: var(--header-bg);
+  border-color: var(--border);
+}
+
+.header__link {
+  @apply rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-primary/10 hover:text-primary;
+  color: var(--text-muted);
+}
+
+.header__actions {
+  @apply flex items-center gap-2;
+}
+
+.header__lang {
+  @apply hidden items-center rounded-lg border sm:flex;
+  border-color: var(--border);
+}
+
+.header__lang-btn {
+  @apply px-2 py-1 text-xs font-semibold transition-colors;
+  color: var(--text-muted);
+
+  &--active {
+    @apply bg-primary text-white;
+  }
+}
+
+.header__icon-btn {
+  @apply flex h-9 w-9 items-center justify-center rounded-lg transition-colors hover:bg-primary/10;
+  color: var(--text);
+}
+
+.header__cv-btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg bg-primary !px-4 !py-2 text-xs font-semibold text-white transition-all hover:bg-primary-light hover:shadow-lg;
+}
+
+.header__menu-btn {
+  @apply flex h-9 w-9 items-center justify-center rounded-lg;
+  color: var(--text);
+}

@@ -1,0 +1,76 @@
+<section class="github" id="github">
+  <div class="section-container">
+    <app-section-title titleKey="GITHUB.TITLE" subtitleKey="GITHUB.SUBTITLE" />
+
+    @if (loading) {
+    <p class="github__status">{{ 'GITHUB.LOADING' | translate }}</p>
+    } @else if (error || !stats) {
+    <div class="github__fallback card">
+      <i class="fa-brands fa-github"></i>
+      <p>{{ 'GITHUB.ERROR' | translate }}</p>
+      <a class="btn-primary" [href]="profileUrl" target="_blank" rel="noopener noreferrer">
+        {{ 'GITHUB.VIEW_PROFILE' | translate }}
+      </a>
+    </div>
+    } @else {
+    <div class="github__stats">
+      <div class="github__stat card">
+        <i class="fa-solid fa-code-branch"></i>
+        <div>
+          <strong>{{ stats.publicRepos }}</strong>
+          <span>{{ 'GITHUB.REPOS' | translate }}</span>
+        </div>
+      </div>
+      <div class="github__stat card">
+        <i class="fa-solid fa-users"></i>
+        <div>
+          <strong>{{ stats.followers }}</strong>
+          <span>{{ 'GITHUB.FOLLOWERS' | translate }}</span>
+        </div>
+      </div>
+      <div class="github__stat card">
+        <i class="fa-solid fa-user-plus"></i>
+        <div>
+          <strong>{{ stats.following }}</strong>
+          <span>{{ 'GITHUB.FOLLOWING' | translate }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="github__repos">
+      <h3>{{ 'GITHUB.RECENT_REPOS' | translate }}</h3>
+      <div class="github__repos-grid">
+        @for (repo of stats.repos; track repo.name) {
+        <a class="github__repo card" [href]="repo.htmlUrl" target="_blank" rel="noopener noreferrer">
+          <div class="github__repo-header">
+            <i class="fa-brands fa-github"></i>
+            <span>{{ repo.name }}</span>
+          </div>
+          @if (repo.description) {
+          <p>{{ repo.description }}</p>
+          }
+          <div class="github__repo-meta">
+            @if (repo.language) {
+            <span><i class="fa-solid fa-circle"></i> {{ repo.language }}</span>
+            }
+            <span><i class="fa-regular fa-star"></i> {{ repo.stars }}</span>
+            <span><i class="fa-solid fa-code-fork"></i> {{ repo.forks }}</span>
+          </div>
+        </a>
+        }
+      </div>
+    </div>
+
+    <div class="github__cta">
+      <a class="btn-outline" [href]="profileUrl" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i>
+        {{ 'GITHUB.VIEW_PROFILE' | translate }}
+      </a>
+      <a class="btn-outline" [href]="gitlabUrl" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-gitlab"></i>
+        {{ 'GITLAB.VIEW_PROFILE' | translate }}
+      </a>
+    </div>
+    }
+  </div>
+</section>

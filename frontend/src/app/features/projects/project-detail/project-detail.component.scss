@@ -1,0 +1,102 @@
+@reference "../../../../styles.scss";
+
+.project-detail {
+  @apply min-h-screen pt-24;
+}
+
+.project-detail__back {
+  @apply mb-8 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:gap-3;
+}
+
+.project-detail__header {
+  @apply mb-10;
+
+  h1 {
+    @apply mb-3 font-display text-3xl font-bold md:text-4xl;
+    color: var(--text);
+  }
+
+  p {
+    @apply max-w-3xl text-base leading-relaxed;
+    color: var(--text-muted);
+  }
+}
+
+.project-detail__icon {
+  @apply mb-4 flex h-16 w-16 items-center justify-center rounded-xl bg-primary/10 text-2xl text-primary;
+}
+
+.project-detail__hero-img-wrapper {
+  @apply mb-6 h-64 md:h-96 w-full overflow-hidden rounded-2xl border border-slate-700/50 bg-slate-900/50 shadow-2xl;
+
+  img {
+    @apply h-full w-full object-cover;
+  }
+}
+
+.project-detail__tagline {
+  @apply max-w-3xl text-base md:text-lg leading-relaxed mb-6;
+  color: var(--text-muted);
+}
+
+.project-detail__actions {
+  @apply flex flex-wrap gap-4 mt-6;
+}
+
+.project-detail__section {
+  @apply mb-6;
+
+  h2 {
+    @apply mb-4 font-display text-xl font-semibold;
+    color: var(--text);
+  }
+
+  ul {
+    @apply space-y-2;
+  }
+
+  li {
+    @apply flex items-start gap-2 text-sm leading-relaxed;
+    color: var(--text-muted);
+
+    i {
+      @apply mt-1 text-primary;
+    }
+  }
+}
+
+.project-detail__arch-desc {
+  @apply mb-4 text-sm leading-relaxed;
+  color: var(--text-muted);
+}
+
+.project-detail__layers {
+  @apply flex flex-wrap items-center gap-2;
+
+  i {
+    @apply text-xs text-primary;
+  }
+}
+
+.project-detail__layer {
+  @apply rounded-lg border px-3 py-2 text-xs font-semibold;
+  border-color: var(--border);
+  background: var(--bg-secondary);
+  color: var(--text);
+}
+
+.project-detail__tags {
+  @apply flex flex-wrap gap-2;
+
+  span {
+    @apply rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary;
+  }
+}
+
+.project-detail__challenges li i {
+  @apply text-amber-500;
+}
+
+.project-detail__results li i {
+  @apply text-green-500;
+}

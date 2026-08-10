@@ -1,0 +1,29 @@
+@reference "../../../../styles.scss";
+
+.skills__grid {
+  @apply grid gap-6 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+.skills__card-header {
+  @apply mb-4 flex items-center gap-3;
+
+  i {
+    @apply text-xl text-primary;
+  }
+
+  h3 {
+    @apply font-display text-lg font-semibold;
+    color: var(--text);
+  }
+}
+
+.skills__tags {
+  @apply flex flex-wrap gap-2;
+}
+
+.skills__tag {
+  @apply rounded-full px-3 py-1 text-xs font-medium;
+  background: var(--bg-secondary);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}

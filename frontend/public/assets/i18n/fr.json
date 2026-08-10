@@ -1,0 +1,107 @@
+{
+  "NAV": {
+    "HOME": "Accueil",
+    "ABOUT": "À propos",
+    "SKILLS": "Compétences",
+    "PROJECTS": "Projets",
+    "ARCHITECTURE": "Architecture",
+    "EXPERIENCE": "Expérience",
+    "GITHUB": "GitHub",
+    "GITLAB": "GitLab",
+    "CONTACT": "Contact",
+    "CV": "Télécharger CV"
+  },
+  "HERO": {
+    "NAME": "T. Wend Goudi Arnaud Kiema",
+    "TITLE": "Ingénieur en Informatique | Développeur Java Senior & Architecte Logiciel",
+    "SUBTITLE": "Consultant en ingénierie logicielle. Spécialiste des architectures Spring Boot, Angular, Microservices et de la dématérialisation d'entreprise.",
+    "CTA_PROJECTS": "Voir mes projets",
+    "CTA_CONTACT": "Me contacter",
+    "CTA_CV": "Télécharger mon CV"
+  },
+  "ABOUT": {
+    "TITLE": "À propos",
+    "SUBTITLE": "Qui suis-je ?",
+    "P1": "Ingénieur en informatique et consultant en ingénierie logicielle, actuellement en charge du suivi des systèmes d'information et de la dématérialisation au Ministère de la Transition Digitale, des Postes et des Communications Électroniques (MTDPCE) du Burkina Faso.",
+    "P2": "Possédant une expérience solide en conception d'architectures d'entreprise (Spring Boot, Angular, React, Flutter, PostgreSQL), je pilote et développe des applications critiques pour l'administration publique, les CHU et le secteur privé.",
+    "P3": "Passionné par les méthodes Agiles/Scrum, l'Architecture Hexagonale, les Microservices et la Cybersécurité (certifié Google), mon objectif est d'apporter des solutions logicielles performantes, sécurisées et durables."
+  },
+  "SKILLS": {
+    "TITLE": "Compétences",
+    "SUBTITLE": "Stack technique & expertise"
+  },
+  "PROJECTS": {
+    "TITLE": "Mes réalisations",
+    "SUBTITLE": "Projets d'entreprise & e-Gouvernement",
+    "SEARCH": "Rechercher un projet...",
+    "ALL": "Tous",
+    "VIEW_DETAILS": "Voir les détails",
+    "TECHNOLOGIES": "Technologies",
+    "ARCHITECTURE": "Architecture",
+    "FEATURES": "Fonctionnalités",
+    "CHALLENGES": "Défis techniques",
+    "RESULTS": "Résultats",
+    "BACK": "Retour aux projets",
+    "NO_RESULTS": "Aucun projet trouvé."
+  },
+  "ARCHITECTURE": {
+    "TITLE": "Architecture",
+    "SUBTITLE": "Approche & patterns",
+    "DESCRIPTION": "Conception d'architectures distribuées orientées métier, avec séparation claire des responsabilités, sécurité centralisée et communication asynchrone."
+  },
+  "EXPERIENCE": {
+    "TITLE": "Expérience",
+    "SUBTITLE": "Parcours professionnel"
+  },
+  "CERTIFICATIONS": {
+    "TITLE": "Certifications",
+    "SUBTITLE": "Formations & validations",
+    "VERIFY": "Vérifier l'attestation"
+  },
+  "PUBLICATIONS": {
+    "TITLE": "Publications",
+    "SUBTITLE": "Articles techniques",
+    "MIN_READ": "min de lecture"
+  },
+  "GITHUB": {
+    "TITLE": "GitHub",
+    "SUBTITLE": "Activité open source",
+    "LOADING": "Chargement des statistiques GitHub...",
+    "ERROR": "Impossible de charger les statistiques GitHub.",
+    "VIEW_PROFILE": "Voir mon profil GitHub",
+    "REPOS": "Dépôts publics",
+    "FOLLOWERS": "Abonnés",
+    "FOLLOWING": "Abonnements",
+    "RECENT_REPOS": "Dépôts récents"
+  },
+  "GITLAB": {
+    "TITLE": "GitLab",
+    "SUBTITLE": "Activité open source",
+    "LOADING": "Chargement des statistiques GitLab...",
+    "ERROR": "Impossible de charger les statistiques GitLab.",
+    "VIEW_PROFILE": "Voir mon profil GitLab",
+    "REPOS": "Dépôts publics",
+    "FOLLOWERS": "Abonnés",
+    "FOLLOWING": "Abonnements",
+    "RECENT_REPOS": "Dépôts récents"
+  },
+  "CONTACT": {
+    "TITLE": "Contact",
+    "SUBTITLE": "Travaillons ensemble",
+    "NAME": "Nom",
+    "EMAIL": "Email",
+    "SUBJECT": "Sujet",
+    "MESSAGE": "Message",
+    "SEND": "Envoyer",
+    "SENDING": "Envoi en cours...",
+    "SUCCESS": "Message envoyé avec succès !",
+    "ERROR": "Erreur lors de l'envoi. Veuillez réessayer.",
+    "INFO": "Disponible pour des missions en architecture logicielle, développement Java/Spring et transformation digitale.",
+    "QR_TITLE": "QR Code portfolio",
+    "QR_DESC": "Scannez pour accéder rapidement à ce portfolio."
+  },
+  "FOOTER": {
+    "RIGHTS": "Tous droits réservés.",
+    "BUILT_WITH": "Portfolio développé avec Angular 20 & Spring Boot"
+  }
+}

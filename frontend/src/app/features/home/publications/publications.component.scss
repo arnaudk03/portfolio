@@ -1,0 +1,113 @@
+@reference "../../../../styles.scss";
+
+.publications {
+  background: var(--bg);
+  @apply py-20;
+}
+
+.publications__grid {
+  @apply grid gap-6 md:grid-cols-2 lg:grid-cols-3;
+}
+
+.publications__card {
+  @apply flex flex-col p-6 cursor-pointer transition-all duration-300 hover:-translate-y-1.5;
+
+  h3 {
+    @apply mb-3 font-display text-xl font-bold transition-colors;
+    color: var(--text);
+  }
+
+  &:hover h3 {
+    color: var(--primary);
+  }
+
+  p {
+    @apply mb-4 flex-1 text-sm leading-relaxed;
+    color: var(--text-muted);
+  }
+}
+
+.publications__meta {
+  @apply mb-3 flex items-center justify-between text-xs;
+  color: var(--text-muted);
+}
+
+.publications__tags {
+  @apply mb-4 flex flex-wrap gap-2;
+
+  span {
+    @apply rounded-md px-2.5 py-1 text-xs font-semibold;
+    background: var(--bg-secondary);
+    color: var(--primary);
+    border: 1px solid var(--border);
+  }
+}
+
+.publications__read-more {
+  @apply inline-flex items-center gap-2 text-sm font-semibold text-primary transition-all hover:gap-3;
+}
+
+/* Modal Reader */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.pub-modal-backdrop {
+  @apply fixed inset-0 z-50 flex items-center justify-center p-4;
+  background: rgba(2, 6, 23, 0.8);
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.2s ease-out both;
+}
+
+.pub-modal {
+  @apply relative w-full max-w-2xl max-h-[85vh] overflow-y-auto p-8 rounded-2xl shadow-2xl;
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+.pub-modal__close {
+  @apply absolute top-4 right-4 flex h-9 w-9 items-center justify-center rounded-full transition-all;
+  color: var(--text-muted);
+
+  &:hover {
+    color: var(--text);
+    background: var(--bg-secondary);
+  }
+}
+
+.pub-modal__meta {
+  @apply flex items-center gap-4 text-xs font-medium text-primary mb-3;
+}
+
+.pub-modal h2 {
+  @apply text-2xl font-bold mb-4;
+  color: var(--text);
+}
+
+.pub-modal__tags {
+  @apply flex flex-wrap gap-2 mb-6;
+
+  span {
+    @apply px-3 py-1 text-xs rounded-lg font-semibold bg-primary/10 text-primary border border-primary/20;
+  }
+}
+
+.pub-modal__body {
+  p {
+    @apply text-base leading-relaxed mb-6;
+    color: var(--text-muted);
+  }
+}
+
+.pub-modal__code-header {
+  @apply flex items-center gap-2 text-xs font-bold uppercase tracking-wider mb-2;
+  color: var(--text-muted);
+}
+
+.pub-modal__code {
+  @apply p-4 rounded-xl font-mono text-xs overflow-x-auto leading-relaxed;
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+  color: var(--text);
+}

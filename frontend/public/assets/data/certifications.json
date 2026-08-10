@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Certificat de fin de formation Cybersécurité Google",
+    "issuer": "Google (Coursera)",
+    "year": "2025",
+    "icon": "fa-brands fa-google",
+    "credentialUrl": "https://coursera.org/verify/professional-cert/3NSW98YHZX8K"
+  },
+  {
+    "name": "Certificat sur les Fondamentaux de la Gestion de Projet",
+    "issuer": "DisasterReady",
+    "year": "2024",
+    "icon": "fa-solid fa-list-check",
+    "credentialUrl": "https://drive.google.com/file/d/1CtT75vYcaxsEhAUK48cbFJqrAw8WWzNU/view?usp=drivesdk"
+  },
+  {
+    "name": "Introduction à la gestion du cycle de projet",
+    "issuer": "ITCILO",
+    "year": "2024",
+    "icon": "fa-solid fa-diagram-project",
+    "credentialUrl": "https://credentials.itcilo.org/ad773b04-d5df-4706-9b15-ef6b7483e039"
+  },
+  {
+    "name": "Développeur Python | Formation complète",
+    "issuer": "Udemy",
+    "year": "2023",
+    "icon": "fa-brands fa-python",
+    "credentialUrl": "https://www.udemy.com/certificate/UC-6e2cc4c2-1967-433c-acd8-cd51fae81962"
+  },
+  {
+    "name": "Spring Framework: Étape par étape vers le niveau professionnel",
+    "issuer": "Udemy",
+    "year": "2023",
+    "icon": "fa-solid fa-leaf",
+    "credentialUrl": "https://www.udemy.com/certificate/UC-459108e2-2483-49f9-8865-fe88dd1a8694"
+  },
+  {
+    "name": "Diplôme d'Ingénieur de Travaux (Génie Informatique)",
+    "issuer": "Université Aube-Nouvelle",
+    "year": "2020",
+    "icon": "fa-solid fa-graduation-cap",
+    "credentialUrl": "https://ufr-an.com"
+  }
+]

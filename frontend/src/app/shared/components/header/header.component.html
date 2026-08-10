@@ -1,0 +1,44 @@
+<header class="header">
+  <div class="header__inner">
+    <button class="header__logo" (click)="navigate('home')" type="button">
+      <span class="header__logo-mark">AK</span>
+      <span class="header__logo-text">Arnaud Kiema</span>
+    </button>
+
+    <nav class="header__nav" [class.header__nav--open]="menuOpen">
+      @for (item of navItems; track item.id) {
+        <button class="header__link" (click)="navigate(item.id)" type="button">
+          {{ item.label | translate }}
+        </button>
+      }
+    </nav>
+
+    <div class="header__actions">
+      <div class="header__lang">
+        @for (lang of languages; track lang.code) {
+          <button
+            class="header__lang-btn"
+            [class.header__lang-btn--active]="currentLang() === lang.code"
+            (click)="setLanguage(lang.code)"
+            type="button"
+          >
+            {{ lang.label }}
+          </button>
+        }
+      </div>
+
+      <button class="header__icon-btn" (click)="toggleTheme()" [attr.aria-label]="isDark() ? 'Light mode' : 'Dark mode'" type="button">
+        <i [class]="isDark() ? 'fa-solid fa-sun' : 'fa-solid fa-moon'"></i>
+      </button>
+
+      <button class="header__cv-btn hidden sm:inline-flex" (click)="downloadCv()" type="button">
+        <i class="fa-solid fa-download"></i>
+        {{ 'NAV.CV' | translate }}
+      </button>
+
+      <button class="header__menu-btn md:hidden" (click)="menuOpen = !menuOpen" type="button">
+        <i [class]="menuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"></i>
+      </button>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,84 @@
+@reference "../../../../styles.scss";
+
+.github__status {
+  @apply text-center text-sm;
+  color: var(--text-muted);
+}
+
+.github__fallback {
+  @apply flex flex-col items-center gap-4 py-10 text-center;
+
+  i {
+    @apply text-5xl;
+    color: var(--text);
+  }
+
+  p {
+    color: var(--text-muted);
+  }
+}
+
+.github__stats {
+  @apply mb-10 grid gap-4 sm:grid-cols-3;
+}
+
+.github__stat {
+  @apply flex items-center gap-4;
+
+  i {
+    @apply text-2xl text-primary;
+  }
+
+  strong {
+    @apply block font-display text-2xl font-bold;
+    color: var(--text);
+  }
+
+  span {
+    @apply text-sm;
+    color: var(--text-muted);
+  }
+}
+
+.github__repos h3 {
+  @apply mb-4 font-display text-lg font-semibold;
+  color: var(--text);
+}
+
+.github__repos-grid {
+  @apply grid gap-4 md:grid-cols-2 lg:grid-cols-3;
+}
+
+.github__repo {
+  @apply block no-underline transition-transform hover:-translate-y-1;
+
+  p {
+    @apply mb-4 line-clamp-2 text-sm leading-relaxed;
+    color: var(--text-muted);
+  }
+}
+
+.github__repo-header {
+  @apply mb-2 flex items-center gap-2 font-semibold text-primary;
+
+  i {
+    @apply text-base;
+  }
+}
+
+.github__repo-meta {
+  @apply flex flex-wrap gap-4 text-xs;
+  color: var(--text-muted);
+
+  span {
+    @apply flex items-center gap-1.5;
+  }
+
+  .fa-circle {
+    @apply text-[8px] text-primary;
+  }
+}
+
+.github__cta {
+  @apply mt-8 text-center;
+}

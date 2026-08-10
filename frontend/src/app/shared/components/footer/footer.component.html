@@ -1,0 +1,21 @@
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div>
+        <p class="footer__name">Arnaud Kiema</p>
+        <p class="footer__role">Développeur Java Senior | Architecte Logiciel</p>
+      </div>
+      <div class="footer__social">
+        @for (link of socialLinks; track link.label) {
+          <a [href]="link.url" target="_blank" rel="noopener noreferrer" [attr.aria-label]="link.label">
+            <i [class]="link.icon"></i>
+          </a>
+        }
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; {{ year }} Arnaud Kiema. {{ 'FOOTER.RIGHTS' | translate }}</p>
+      <p class="footer__tech">{{ 'FOOTER.BUILT_WITH' | translate }}</p>
+    </div>
+  </div>
+</footer>

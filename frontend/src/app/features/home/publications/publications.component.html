@@ -1,0 +1,65 @@
+<section class="publications" id="publications">
+  <div class="section-container">
+    <app-section-title titleKey="PUBLICATIONS.TITLE" subtitleKey="PUBLICATIONS.SUBTITLE" />
+
+    <div class="publications__grid">
+      @for (pub of publications; track pub.slug) {
+        <article class="publications__card card" (click)="openArticle(pub)">
+          <div class="publications__meta">
+            <span class="publications__date">
+              <i class="fa-regular fa-calendar"></i> {{ formatDate(pub.date) }}
+            </span>
+            <span class="publications__read-time">
+              <i class="fa-regular fa-clock"></i> {{ pub.readTime }} {{ 'PUBLICATIONS.READ_TIME' | translate }}
+            </span>
+          </div>
+          <h3>{{ localized(pub.title) }}</h3>
+          <p>{{ localized(pub.summary) }}</p>
+          <div class="publications__tags">
+            @for (tag of pub.tags; track tag) {
+              <span>{{ tag }}</span>
+            }
+          </div>
+          <button class="publications__read-more" type="button">
+            Lire l'article <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </article>
+      }
+    </div>
+
+    <!-- Modal Article Reader -->
+    @if (selectedArticle) {
+      <div class="pub-modal-backdrop" (click)="closeArticle()">
+        <div class="pub-modal card" (click)="$event.stopPropagation()">
+          <button class="pub-modal__close" (click)="closeArticle()" type="button">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          
+          <div class="pub-modal__meta">
+            <span class="pub-modal__date"><i class="fa-regular fa-calendar"></i> {{ formatDate(selectedArticle.date) }}</span>
+            <span class="pub-modal__read"><i class="fa-regular fa-clock"></i> {{ selectedArticle.readTime }} min</span>
+          </div>
+
+          <h2>{{ localized(selectedArticle.title) }}</h2>
+
+          <div class="pub-modal__tags">
+            @for (tag of selectedArticle.tags; track tag) {
+              <span>{{ tag }}</span>
+            }
+          </div>
+
+          <div class="pub-modal__body">
+            <p>{{ languageService.currentLang() === 'fr' ? selectedArticle.contentFr : selectedArticle.contentEn }}</p>
+
+            @if (selectedArticle.codeSnippet) {
+              <div class="pub-modal__code-header">
+                <i class="fa-solid fa-code"></i> Exemple d'implémentation / Extraits
+              </div>
+              <pre class="pub-modal__code"><code>{{ selectedArticle.codeSnippet }}</code></pre>
+            }
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section>

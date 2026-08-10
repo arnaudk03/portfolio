@@ -1,0 +1,19 @@
+<section class="experience" id="experience">
+  <div class="section-container">
+    <app-section-title titleKey="EXPERIENCE.TITLE" subtitleKey="EXPERIENCE.SUBTITLE" />
+    <div class="experience__timeline">
+      @for (item of items; track item.year; let first = $first) {
+        <div class="experience__item" [class.experience__item--active]="first">
+          <div class="experience__marker">
+            <span class="experience__year">{{ item.year }}</span>
+          </div>
+          <div class="experience__content card">
+            <h3>{{ label(item.title) }}</h3>
+            <p class="experience__company">{{ label(item.company) }}</p>
+            <p class="experience__desc">{{ label(item.description) }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

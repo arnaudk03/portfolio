@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "microservices-spring-boot",
+    "title": {
+      "fr": "Microservices avec Spring Boot",
+      "en": "Microservices with Spring Boot"
+    },
+    "summary": {
+      "fr": "Guide pratique pour concevoir et déployer des microservices Spring Boot avec API Gateway, service discovery et communication asynchrone.",
+      "en": "Practical guide to designing and deploying Spring Boot microservices with API Gateway, service discovery and async communication."
+    },
+    "date": "2025-06",
+    "tags": ["Java", "Spring Boot", "Microservices"],
+    "readTime": 12
+  },
+  {
+    "slug": "securiser-api-keycloak",
+    "title": {
+      "fr": "Sécuriser une API avec Keycloak",
+      "en": "Securing an API with Keycloak"
+    },
+    "summary": {
+      "fr": "Intégration OAuth2/OIDC avec Keycloak, configuration des realms, rôles RBAC et protection des endpoints Spring Security.",
+      "en": "OAuth2/OIDC integration with Keycloak, realm configuration, RBAC roles and Spring Security endpoint protection."
+    },
+    "date": "2025-03",
+    "tags": ["Keycloak", "OAuth2", "Spring Security"],
+    "readTime": 10
+  },
+  {
+    "slug": "architecture-hexagonale",
+    "title": {
+      "fr": "Architecture hexagonale en pratique",
+      "en": "Hexagonal architecture in practice"
+    },
+    "summary": {
+      "fr": "Application du pattern Ports & Adapters pour isoler le domaine métier et faciliter les tests et la maintenabilité.",
+      "en": "Applying the Ports & Adapters pattern to isolate business domain and improve testability and maintainability."
+    },
+    "date": "2024-11",
+    "tags": ["Architecture", "DDD", "Java"],
+    "readTime": 8
+  },
+  {
+    "slug": "dockeriser-application-java",
+    "title": {
+      "fr": "Dockeriser une application Java",
+      "en": "Dockerizing a Java application"
+    },
+    "summary": {
+      "fr": "Multi-stage builds, optimisations JVM en conteneur et déploiement avec Docker Compose et Kubernetes.",
+      "en": "Multi-stage builds, JVM container optimizations and deployment with Docker Compose and Kubernetes."
+    },
+    "date": "2024-08",
+    "tags": ["Docker", "Kubernetes", "DevOps"],
+    "readTime": 9
+  },
+  {
+    "slug": "oauth2-explique",
+    "title": {
+      "fr": "OAuth2 expliqué simplement",
+      "en": "OAuth2 explained simply"
+    },
+    "summary": {
+      "fr": "Les flows Authorization Code, Client Credentials et les bonnes pratiques pour sécuriser les applications d'entreprise.",
+      "en": "Authorization Code and Client Credentials flows and best practices for securing enterprise applications."
+    },
+    "date": "2024-05",
+    "tags": ["OAuth2", "JWT", "Security"],
+    "readTime": 7
+  }
+]

@@ -1,0 +1,44 @@
+@reference "../../../../styles.scss";
+
+.footer {
+  border-top: 1px solid var(--border);
+  background: var(--bg-secondary);
+}
+
+.footer__inner {
+  @apply mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 !py-12;
+}
+
+.footer__top {
+  @apply mb-8 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center;
+}
+
+.footer__name {
+  @apply font-display text-lg font-semibold;
+  color: var(--text);
+}
+
+.footer__role {
+  @apply text-sm;
+  color: var(--text-muted);
+}
+
+.footer__social {
+  @apply flex gap-4;
+
+  a {
+    @apply flex h-10 w-10 items-center justify-center rounded-lg transition-colors hover:bg-primary hover:text-white;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+  }
+}
+
+.footer__bottom {
+  @apply flex flex-col gap-2 border-t pt-6 text-sm sm:flex-row sm:justify-between;
+  border-color: var(--border);
+  color: var(--text-muted);
+}
+
+.footer__tech {
+  @apply text-xs italic;
+}

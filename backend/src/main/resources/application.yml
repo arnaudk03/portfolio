@@ -1,0 +1,33 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: portfolio-backend
+  mail:
+    host: ${MAIL_HOST:smtp.gmail.com}
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USERNAME:}
+    password: ${MAIL_PASSWORD:}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+portfolio:
+  contact:
+    recipient: ${CONTACT_RECIPIENT:contact@arnaud-kiema.dev}
+  mail:
+    enabled: ${MAIL_ENABLED:false}
+  cors:
+    allowed-origins: ${CORS_ORIGINS:http://localhost:4200,http://localhost}
+  github:
+    token: ${GITHUB_TOKEN:}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

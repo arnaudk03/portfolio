@@ -1,0 +1,20 @@
+<section class="skills" id="skills">
+  <div class="section-container">
+    <app-section-title titleKey="SKILLS.TITLE" subtitleKey="SKILLS.SUBTITLE" />
+    <div class="skills__grid">
+      @for (category of categories; track category.id) {
+        <div class="skills__card card">
+          <div class="skills__card-header">
+            <i [class]="'fa-solid ' + category.icon"></i>
+            <h3>{{ label(category.title) }}</h3>
+          </div>
+          <div class="skills__tags">
+            @for (skill of category.skills; track skill) {
+              <span class="skills__tag">{{ skill }}</span>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
