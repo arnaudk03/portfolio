@@ -17,7 +17,7 @@ export class SkillsComponent implements OnInit {
   categories: SkillCategory[] = [];
 
   ngOnInit(): void {
-    this.http.get<SkillCategory[]>('/assets/data/skills.json').subscribe((data) => {
+    this.http.get<SkillCategory[]>('assets/data/skills.json').subscribe((data) => {
       this.categories = data;
     });
   }

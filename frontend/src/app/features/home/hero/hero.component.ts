@@ -14,6 +14,6 @@ export class HeroComponent {
   }
 
   downloadCv(): void {
-    window.open('/assets/cv/arnaud-kiema-cv.pdf', '_blank');
+    window.open('assets/cv/arnaud-kiema-cv.pdf', '_blank');
   }
 }
