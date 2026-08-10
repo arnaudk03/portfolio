@@ -40,6 +40,8 @@ jobs:
 
       - name: Run Frontend Tests
         working-directory: frontend
+        env:
+          CHROME_BIN: /usr/bin/google-chrome
         run: npx ng test --watch=false --no-progress --browsers=ChromeHeadless
 
       - name: Build Frontend for GitHub Pages
