@@ -55,7 +55,7 @@ describe('PortfolioDataService', () => {
       let result: Project[] | undefined;
       service.getProjects().subscribe(p => (result = p));
 
-      const req = httpMock.expectOne('/assets/data/projects.json');
+      const req = httpMock.expectOne('assets/data/projects.json');
       expect(req.request.method).toBe('GET');
       req.flush([mockProject]);
 
@@ -73,7 +73,7 @@ describe('PortfolioDataService', () => {
       let result: Project | undefined;
       service.getProject('proj-1').subscribe(p => (result = p));
 
-      const req = httpMock.expectOne('/assets/data/projects.json');
+      const req = httpMock.expectOne('assets/data/projects.json');
       req.flush([mockProject]);
 
       expect(result).toBeDefined();
@@ -84,7 +84,7 @@ describe('PortfolioDataService', () => {
       let result: Project | undefined = mockProject;
       service.getProject('id-inexistant').subscribe(p => (result = p));
 
-      const req = httpMock.expectOne('/assets/data/projects.json');
+      const req = httpMock.expectOne('assets/data/projects.json');
       req.flush([mockProject]);
 
       expect(result).toBeUndefined();
@@ -159,7 +159,7 @@ describe('PortfolioDataService', () => {
   describe('getCertifications()', () => {
     it('devrait appeler /assets/data/certifications.json en GET', () => {
       service.getCertifications().subscribe();
-      const req = httpMock.expectOne('/assets/data/certifications.json');
+      const req = httpMock.expectOne('assets/data/certifications.json');
       expect(req.request.method).toBe('GET');
       req.flush([]);
     });
@@ -168,7 +168,7 @@ describe('PortfolioDataService', () => {
   describe('getExperiences()', () => {
     it('devrait appeler /assets/data/experience.json en GET', () => {
       service.getExperiences().subscribe();
-      const req = httpMock.expectOne('/assets/data/experience.json');
+      const req = httpMock.expectOne('assets/data/experience.json');
       expect(req.request.method).toBe('GET');
       req.flush([]);
     });
@@ -177,7 +177,7 @@ describe('PortfolioDataService', () => {
   describe('getPublications()', () => {
     it('devrait appeler /assets/data/publications.json en GET', () => {
       service.getPublications().subscribe();
-      const req = httpMock.expectOne('/assets/data/publications.json');
+      const req = httpMock.expectOne('assets/data/publications.json');
       expect(req.request.method).toBe('GET');
       req.flush([]);
     });

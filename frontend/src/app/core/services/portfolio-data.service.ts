@@ -9,7 +9,7 @@ export class PortfolioDataService {
   constructor(private readonly http: HttpClient) {}
 
   getProjects(): Observable<Project[]> {
-    return this.http.get<Project[]>('/assets/data/projects.json');
+    return this.http.get<Project[]>('assets/data/projects.json');
   }
 
   getProject(id: string): Observable<Project | undefined> {
@@ -21,15 +21,15 @@ export class PortfolioDataService {
   }
 
   getCertifications(): Observable<Certification[]> {
-    return this.http.get<Certification[]>('/assets/data/certifications.json');
+    return this.http.get<Certification[]>('assets/data/certifications.json');
   }
 
   getExperiences(): Observable<ExperienceItem[]> {
-    return this.http.get<ExperienceItem[]>('/assets/data/experience.json');
+    return this.http.get<ExperienceItem[]>('assets/data/experience.json');
   }
 
   getPublications(): Observable<Publication[]> {
-    return this.http.get<Publication[]>('/assets/data/publications.json');
+    return this.http.get<Publication[]>('assets/data/publications.json');
   }
 
   getGithubStats(): Observable<GithubStats> {
