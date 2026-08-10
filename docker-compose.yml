@@ -19,7 +19,7 @@ services:
       - MAIL_PORT=${MAIL_PORT:-587}
       - MAIL_USERNAME=${MAIL_USERNAME:-}
       - MAIL_PASSWORD=${MAIL_PASSWORD:-}
-      - CONTACT_RECIPIENT=${CONTACT_RECIPIENT:-contact@arnaud-kiema.dev}
+      - CONTACT_RECIPIENT=${CONTACT_RECIPIENT:-tonguoa@gmail.com}
       - CORS_ORIGINS=http://localhost,http://localhost:80
       - GITHUB_TOKEN=${GITHUB_TOKEN:-}
     ports:

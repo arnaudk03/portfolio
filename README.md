@@ -89,7 +89,7 @@ docker compose up --build
 | `MAIL_PORT` | Port SMTP | `587` |
 | `MAIL_USERNAME` | Identifiant SMTP | — |
 | `MAIL_PASSWORD` | Mot de passe SMTP | — |
-| `CONTACT_RECIPIENT` | Adresse destinataire du formulaire de contact | `contact@arnaud-kiema.dev` |
+| `CONTACT_RECIPIENT` | Adresse destinataire du formulaire de contact | `tonguoa@gmail.com` |
 | `CORS_ORIGINS` | Origines HTTP autorisées pour CORS | `http://localhost:4200,http://localhost` |
 | `GITHUB_TOKEN` | Token GitHub (optionnel, pour éviter les limites de rate limit) | — |
 

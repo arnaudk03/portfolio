@@ -3,7 +3,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { SectionTitleComponent } from '../../../shared/components/section-title/section-title.component';
 import { PortfolioDataService } from '../../../core/services/portfolio-data.service';
 import { GithubStats } from '../../../core/models/portfolio.models';
-import { environment } from '../../../../environments/environment';
+import { environment } from '../../../../environments/environment.prod';
 
 @Component({
   selector: 'app-github',

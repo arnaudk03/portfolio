@@ -17,6 +17,7 @@ export class ContactComponent {
 
   sending = false;
   feedback: 'success' | 'error' | null = null;
+  readonly contactEmail = environment.contactEmail;
   readonly qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent(environment.portfolioUrl)}`;
 
   readonly form = this.fb.nonNullable.group({
