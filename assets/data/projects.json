@@ -84,7 +84,7 @@
         "en": "Full activity traceability and transparency via audit trail and dashboards"
       }
     ],
-    "image": "/assets/images/e-activite.png"
+    "image": "assets/images/e-activite.png"
   },
   {
     "id": "referentiel-it",
@@ -177,7 +177,7 @@
         "en": "Strategic dashboard module allowing top management to visualize collective IT risks and control the training budget"
       }
     ],
-    "image": "/assets/images/referentiel-it.png"
+    "image": "assets/images/referentiel-it.png"
   },
   {
     "id": "fasopharma",
@@ -336,7 +336,7 @@
         "en": "Ultra-performant hierarchical queries: retrieve all localities of a region (N levels) in a single SQL join via Closure Table"
       }
     ],
-    "image": "/assets/images/e-commune.png"
+    "image": "assets/images/e-commune.png"
   },
   {
     "id": "tontines",
@@ -402,7 +402,7 @@
         "en": "Application deployed with 200+ active users managing their tontines from mobile"
       }
     ],
-    "image": "/assets/images/tontines.png"
+    "image": "assets/images/tontines.png"
   },
   {
     "id": "portfolio",
@@ -470,6 +470,6 @@
         "en": "High-performance, containerized professional portfolio ready for production deployment"
       }
     ],
-    "image": "/assets/images/portfolio.png"
+    "image": "assets/images/portfolio.png"
   }
 ]
